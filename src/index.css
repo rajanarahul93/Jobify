@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-body;
+  }
+  img {
+    max-width: none;
+  }
+}
+
+@layer components {
+  .span {
+    @apply px-2 py-1 sm:px-3 sm:py-1 sm:font-bold font-semibold rounded-md bg-LightGrayishCyanFilterTablets text-DesaturatedDarkCyan
+          hover:bg-DesaturatedDarkCyan hover:text-LightGrayishCyanFilterTablets
+            transition-colors duration-200 ease-in-out cursor-pointer
+            sm:text-base text-[15px];
+  }
+
+  .h6 {
+    @apply uppercase text-white px-3 py-1 text-sm sm:text-[15px] flex justify-center items-center rounded-full;
+  }
+
+  .userLayout {
+    @apply relative bg-white rounded-md xs:grid xs:grid-cols-[auto_1fr] flex flex-col z-10 gap-4 sm:gap-5 
+            lg:max-w-[900px] w-full h-auto 
+            xs:pt-6 pr-6 pb-6 pl-6 pt-9;
+    box-shadow: hsl(180deg 29% 50% / 20%) 0px 12px 35px 0px;
+  }
+
+  .filtered {
+    @apply relative bg-white rounded-md flex gap-4 sm:gap-5 translate-y-[-50%] m-auto justify-between items-center
+            lg:max-w-[900px] h-auto 
+            p-6 lg:mx-auto mx-4;
+    box-shadow: hsl(180deg 29% 50% / 20%) 0px 12px 35px 0px;
+  }
+
+  .avatar {
+    @apply sm:w-20 sm:h-20 h-12 w-12 xs:relative absolute xs:transform-none translate-y-[-60px];
+  }
+}
+
+* {
+  font-weight: 500;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  @apply bg-LightGrayishCyanFilterTablets;
+}
